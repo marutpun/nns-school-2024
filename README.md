@@ -12,4 +12,4 @@ A new 2024 semi-stasic site https://watnanong.netlify.app I do plan implementing
 
 ### Note
 
-Cannot optimize images. After `npm run build`, the images are not optimized and the file size still remains the same. Tried to `npm install sharp` manually. It also did not work.
+Cannot optimize images. After `npm run build`, the images are not optimized and the file size still remains the same. Tried to `npm install sharp` manually. It also did not work. So I decided to deploy via git reposirory instead (via Netlify).
