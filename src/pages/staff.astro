@@ -1,0 +1,49 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Hero from "../components/Hero.astro";
+import Avatar from "../components/Avatar.astro";
+
+const staff: { title: string; rank: string }[] = [
+  {
+    title: "นายธิตติยพัทย์ อยู่จิตร์",
+    rank: "ผู้อำนวยการโรงเรียน",
+  },
+  {
+    title: "นางสาวนฤมล เปี่ยมพร้อม",
+    rank: "ครู",
+  },
+  {
+    title: "นายสิริวัตร สมใจ",
+    rank: "ครู",
+  },
+  {
+    title: "นางสาวสิรีธร ยางเดิม",
+    rank: "ครู",
+  },
+  {
+    title: "นางสาวโชตินา ขจิตสุวรรณ",
+    rank: "ครู",
+  },
+  {
+    title: "นางสาวพรรณภัทร ไผ่ทอง",
+    rank: "เจ้าหน้าที่ธุรการ",
+  },
+  {
+    title: "นายสุภาพ ใจมุ่ง",
+    rank: "นักการภารโรง",
+  },
+];
+---
+
+<Layout title="บุคลากร" businessName="โรงเรียนวัดนาหนอง">
+  <Hero title="บุคลากร" description="คณะผู้บริหาร ครู และเจ้าหน้าที่" />
+  <main class="container">
+    <div class="section">
+      {
+        staff.map((person) => (
+          <Avatar title={person.title} rank={person.rank} />
+        ))
+      }
+    </div>
+  </main>
+</Layout>

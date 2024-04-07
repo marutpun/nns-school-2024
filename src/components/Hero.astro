@@ -1,0 +1,17 @@
+---
+interface Props {
+  title: string;
+  description: string;
+}
+
+const { title, description } = Astro.props;
+---
+
+<heder class="hero">
+  <div class="container">
+    <div class="hero-body">
+      <h2 class="title is-1 is-spaced hero__title">{title}</h2>
+      <p class="subtitle is-5 hero__subtitle">{description}</p>
+    </div>
+  </div>
+</heder>

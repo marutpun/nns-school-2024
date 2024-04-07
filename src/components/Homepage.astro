@@ -1,0 +1,20 @@
+---
+interface Props {
+  description: string;
+}
+
+const { description } = Astro.props;
+---
+
+<section class="homepage section">
+  <slot />
+  <div class="homepage__meta">
+    <div class="container">
+      <div class="content">
+        <p class="homepage__text">
+          {description}
+        </p>
+      </div>
+    </div>
+  </div>
+</section>

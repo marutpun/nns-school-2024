@@ -1,0 +1,109 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  p {
+    @apply text-base;
+  }
+
+  ul {
+    @apply m-0;
+  }
+
+  body {
+    --bulma-body-color: #0a0a0a;
+  }
+}
+
+@layer components {
+  .skipToContent {
+    @apply z-[201] text-[#1c1e21] bg-white px-4 py-2 fixed top-4 left-full focus:left-4 shadow-[0_5px_40px_#0003];
+  }
+
+  .hero {
+    @apply bg-[#8dc125];
+  }
+
+  .hero__title {
+    @apply mb-5;
+  }
+
+  .hero__title,
+  .hero__subtitle {
+    @apply text-white text-center;
+  }
+
+  .homepage {
+    @apply items-center min-h-[300px] flex relative;
+  }
+
+  .homepage__img {
+    @apply brightness-[0.6] object-cover w-full h-full absolute top-0 left-0;
+  }
+
+  .homepage__meta {
+    @apply w-full relative;
+  }
+
+  .homepage__text {
+    @apply text-white text-2xl max-w-[60ch];
+  }
+
+  .testimonial__container {
+    @apply flex-col flex items-center;
+  }
+
+  .testimonial__img {
+    @apply w-[200px] h-[200px] max-w-full;
+  }
+
+  .avatar {
+    @apply gap-x-4 flex;
+  }
+
+  .avatar__photo {
+    @apply rounded-full block overflow-hidden w-[128px] h-[128px];
+  }
+
+  .avatar__intro {
+    @apply flex-col flex-1 justify-center flex;
+  }
+
+  .avatar__name {
+    @apply text-base font-bold;
+  }
+
+  .avatar__subtitle {
+    @apply mt-1;
+  }
+
+  .form {
+    @apply max-w-[60ch] mx-auto;
+  }
+
+  .field {
+    @apply mb-4;
+  }
+
+  .social {
+    @apply mb-4 flex gap-x-2;
+  }
+
+  .footer .footer__title {
+    @apply text-2xl;
+  }
+  .footer .footer__address {
+    @apply text-base not-italic;
+  }
+}
+
+@layer utilities {
+  .content__colophon {
+    @apply italic;
+  }
+
+  .content a {
+    @apply text-[#8dc125] hover:underline;
+  }
+}

@@ -1,0 +1,71 @@
+---
+interface Props {
+  businessName: string;
+}
+
+const menuLink: {
+  title: string;
+  href: string;
+}[] = [
+  { title: "หน้าแรก", href: "/" },
+  { title: "เกี่ยวกับเรา", href: "/about" },
+  { title: "OIT", href: "/oit" },
+  { title: "บุคลากร", href: "/staff" },
+  { title: "ติดต่อเรา", href: "/contact" },
+  { title: "บริการ", href: "/service" },
+];
+
+const { businessName } = Astro.props;
+---
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a class="navbar-item" href="/" rel="home"><h1>{businessName}</h1></a>
+    <a
+      role="button"
+      class="navbar-burger"
+      aria-label="menu"
+      aria-expanded="false"
+      data-target="offCanvas1"
+    >
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+  <div id="offCanvas1" class="navbar-menu">
+    <div class="navbar-end">
+      {
+        menuLink.map((link) => (
+          <a class="navbar-item" href={link.href}>
+            {link.title}
+          </a>
+        ))
+      }
+    </div>
+  </div>
+</nav>
+
+<script is:inline>
+  document.addEventListener("DOMContentLoaded", () => {
+    const $navbarBurgers = Array.prototype.slice.call(
+      document.querySelectorAll(".navbar-burger"),
+      0,
+    );
+
+    // Add a click event on each of them
+    $navbarBurgers.forEach((el) => {
+      el.addEventListener("click", () => {
+        // Get the target from the "data-target" attribute
+        const target = el.dataset.target;
+        const $target = document.getElementById(target);
+
+        // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+        el.classList.toggle("is-active");
+        $target.classList.toggle("is-active");
+      });
+    });
+  });
+</script>

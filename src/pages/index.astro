@@ -1,0 +1,19 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Homepage from "../components/Homepage.astro";
+import Testimonial from "../components/Testimonial.astro";
+
+import { Image } from "astro:assets";
+import HomepageBg from "../assets/homepage.jpg";
+---
+
+<Layout title="หน้าแรก" businessName="โรงเรียนวัดนาหนอง">
+  <main>
+    <Homepage
+      description="สถานศึกษาที่ให้บริการการศึกษาภาคบังคับ เพื่อให้ผู้เรียนได้ก้าวทันโลกและมีจิตสำนึกต่อสังคม"
+    >
+      <Image src={HomepageBg} alt="Welcome" class="homepage__img" /></Homepage
+    >
+    <Testimonial />
+  </main>
+</Layout>

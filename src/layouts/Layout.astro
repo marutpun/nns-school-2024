@@ -1,0 +1,36 @@
+---
+interface Props {
+  title: string;
+  businessName: string;
+}
+
+const { title, businessName } = Astro.props;
+import "../styles/overrides.scss";
+import "../styles/main.css";
+
+import SkipNavigation from "../components/SkipNavigation.astro";
+import Navbar from "../components/Navbar.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<!doctype html>
+<html lang="th">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>{title} | {businessName}</title>
+  </head>
+  <body>
+    <div id="site">
+      <SkipNavigation skipElement="skipToContent_fallback" />
+      <Navbar businessName="โรงเรียนวัดนาหนอง" />
+      <div class="skipToContent_fallback">
+        <slot />
+      </div>
+      <Footer
+        businessName="โรงเรียนวัดนาหนอง (วิธานราษฎ์อนุกูล)"
+        address="หมู่ 2 ตำบลดอนแร่ อำเภอเมือง จังหวัดราชบุรี 70000"
+      />
+    </div>
+  </body>
+</html>

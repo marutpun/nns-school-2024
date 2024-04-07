@@ -1,0 +1,19 @@
+---
+interface Props {
+  businessName: string;
+  address: string;
+}
+
+const { businessName, address } = Astro.props;
+---
+
+<footer class="footer">
+  <div class="container">
+    <div class="content">
+      <h2 class="footer__title">{businessName}</h2>
+      <address class="footer__address">
+        {address}
+      </address>
+    </div>
+  </div>
+</footer>

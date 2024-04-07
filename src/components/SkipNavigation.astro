@@ -1,0 +1,11 @@
+---
+interface Props {
+  skipElement: string;
+}
+
+const { skipElement } = Astro.props;
+---
+
+<div role="region" aria-label="Skip to main content">
+  <a class="skipToContent" href={`#${skipElement}`}>Skip to main content</a>
+</div>

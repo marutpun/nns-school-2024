@@ -1,0 +1,38 @@
+---
+import { Image } from "astro:assets";
+import certification from "../assets/undraw_certification_aif8.svg";
+import connection from "../assets/undraw_connection_b38q.svg";
+import education from "../assets/undraw_education_f8ru.svg";
+---
+
+<div class="section container">
+  <div class="columns">
+    <div class="column">
+      <div class="content testimonial__container">
+        <Image src={certification} alt="Staff" class="testimonial__img" />
+        <h3 class="has-text-centered">บุคลากรที่มีคุณภาพ</h3>
+        <p class="has-text-centered">
+          เพียบพร้อมด้วยผู้เชี่ยวชาญที่หลากหลายและมากประสบการณ์
+        </p>
+      </div>
+    </div>
+    <div class="column">
+      <div class="content testimonial__container">
+        <Image src={connection} alt="Education" class="testimonial__img" />
+        <h3 class="has-text-centered">การเรียนการสอนร่วมเทคโนโลยี</h3>
+        <p class="has-text-centered">
+          ใช้เครื่องมือที่ทันสมัยให้ผู้เรียนเท่าเทียมและก้าวทันโลก
+        </p>
+      </div>
+    </div>
+    <div class="column">
+      <div class="content testimonial__container">
+        <Image src={education} alt="School" class="testimonial__img" />
+        <h3 class="has-text-centered">โรงเรียนคุณภาพประจำตำบล</h3>
+        <p class="has-text-centered">
+          พัฒนาคุณภาพด้านการศึกษาให้กับประเทศที่เริ่มจากท้องถิ่น
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
